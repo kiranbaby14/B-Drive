@@ -1,12 +1,12 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Upload = await hre.ethers.getContractFactory('Upload');
-  const upload = await Upload.deploy();
+  const BDrive = await hre.ethers.getContractFactory('BDrive');
+  const bDrive = await BDrive.deploy();
 
-  await upload.deployed();
+  await bDrive.deployed();
 
-  console.log(`Smat contract deployed to ${upload.address}`);
+  console.log(`Smat contract deployed to ${bDrive.address}`);
 }
 
 main().catch((error) => {

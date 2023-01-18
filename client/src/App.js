@@ -1,4 +1,4 @@
-import Upload from "./artifacts/contracts/Upload.sol/Upload.json";
+import BDrive from "./artifacts/contracts/BDrive.sol/BDrive.json";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import Modal from "./components/Modal/Modal";
@@ -37,7 +37,7 @@ function App() {
 
         const contract = new ethers.Contract(
           contractAddress,
-          Upload.abi,
+          BDrive.abi,
           signer
         );
 
