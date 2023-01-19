@@ -11,7 +11,6 @@ const Display = ({ contract, account }) => {
         console.log(dataArray);
       } else {
         dataArray = await contract.display(account);
-        console.log(dataArray)
       }
     } catch (e) {
       alert("You don't have access");
@@ -24,8 +23,9 @@ const Display = ({ contract, account }) => {
       // console.log(str);
       // console.log(str_array);
       const images = str_array.map((item, i) => {
+        console.log(item.substring(6));
         return (
-          <a href={item} key={i} target="_blank">
+          <a href={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`} key={i} target="_blank">
             <img
               key={i}
               src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}

@@ -4,9 +4,7 @@ import "./Modal.css";
 const Modal = ({ setModalOpen, contract }) => {
   const sharing = async () => {
     const address = document.querySelector(".address").value;
-    console.log("hey");
     await contract.allow(address);
-    console.log("wholaaa");
     setModalOpen(false);
   };
   useEffect(() => {
