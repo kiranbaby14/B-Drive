@@ -119,7 +119,7 @@
   }
   
   h1 {
-    font-family: "Dancing Script", cursive;
+    /* font-family: "Dancing Script", cursive; */
     font-size: 60px;
     margin-bottom: 30px;
   }
@@ -133,6 +133,27 @@
     padding: 16px;
     margin-top: 10px;
     vertical-align: center;
+    background: #36f43f;
+    width: 70px;
+    height: 45px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: -1;
+    cursor: pointer;
+  }
+
+  .share:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .unShare {
+    padding: 10px;
+    margin: 10px;
+    vertical-align: center;
     background: #f44336;
     width: 70px;
     height: 45px;
@@ -142,9 +163,11 @@
     font-size: 13px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: -1;
+    cursor: pointer;
   }
-  
-  .share:hover {
+
+  .unShare:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
       0 17px 50px 0 rgba(0, 0, 0, 0.19);
   }
+  

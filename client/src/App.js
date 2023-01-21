@@ -13,6 +13,7 @@ function App() {
   const [contract, setContract] = useState(null);
   const [provider, setProvider] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [shareType, setShareType] = useState("");
 
   useEffect(() => {
     //get the web3 injection
@@ -53,17 +54,28 @@ function App() {
   return (
     <>
       {!modalOpen && (
-        <button className="share" onClick={() => setModalOpen(true)}>
-          Share
-        </button>
+        <>
+          <button className="share" onClick={() => {
+            setModalOpen(true);
+            setShareType("share")
+          }}>
+            Share
+          </button>
+          <button className="unShare" onClick={() => {
+            setModalOpen(true);
+            setShareType("unShare")
+          }}>
+            UnShare
+          </button>
+        </>
       )}
 
       {modalOpen && (
-        <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
+        <Modal setModalOpen={setModalOpen} contract={contract} shareType={shareType}></Modal>
       )}
 
       <div className="App">
-        <h1 style={{ color: "white" }}>Gdrive 3.0</h1>
+        <h1 style={{ color: "white" }}>B-Drive</h1>
         <div class="bg"></div>
         <div class="bg bg2"></div>
         <div class="bg bg3"></div>
